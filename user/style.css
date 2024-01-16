@@ -1,0 +1,491 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+ :root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --main-color: #c8815f;
+    --big-font: 4.5rem;
+    --h2-font: 3.3rem;
+    --h3-font: 2rem;
+    --normal-font: 1rem;
+}
+
+body {
+    background-color: var(--bg-color);
+    /* Ganti 'nama_file_gambar.jpg' dengan nama file gambar Anda */
+    background-size: cover;
+    /* Menyesuaikan ukuran gambar agar mencakup seluruh latar belakang */
+    background-position: center;
+    /* Menyesuaikan posisi gambar agar berada di tengah latar belakang */
+    font-family: 'Montserrat', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Menggunakan warna hitam dengan tingkat transparansi (alpha) 0.5 */
+    z-index: -1;
+    /* Menempatkan lapisan di belakang konten body */
+}
+
+header {
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 20px 14%;
+    transition: all 0.35s ease;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-color);
+}
+
+.logo img {
+    width: 145px;
+    height: auto;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: white;
+    font-weight: 600;
+    padding: 10px 25px;
+    /* Tambahkan nilai padding di sini */
+    font-size: var(--normal-font);
+    transition: all 0.36s ease;
+}
+
+.navlist a:hover {
+    color: var(--main-color);
+}
+
+.header-icons i {
+    font-size: 32px;
+    color: white;
+    margin-right: 20px;
+    transition: all 0.36s ease;
+}
+
+.header-icons i:hover {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 34px;
+    color: var(--text-color);
+    z-index: 10001;
+    margin-right: 20px;
+    display: none;
+}
+
+section {
+    padding: 100px 14%;
+}
+
+.home {
+    min-height: 100vh;
+    width: 100%;
+    background: url(/images/mobil.jpg);
+    /* Adjust the path accordingly */
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+
+.home-text {
+    text-align: center;
+    padding-top: 50px;
+    /* Adjust padding as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    /* Set text color to white */
+    position: absolute;
+    top: 20%;
+    left: -100%;
+    /* Start from outside the left side */
+    transform: translate(0, -50%);
+    animation: slide-in 2s forwards;
+}
+
+.home-text h1,
+.home-text h2 {
+    font-style: italic;
+    /* Make text italic */
+    color: white;
+    /* Set text color to white */
+    font-size: 28px;
+    /* Set font size to 28px */
+    margin-bottom: 10px;
+    /* Adjust margin as needed */
+}
+
+@keyframes slide-in {
+    to {
+        left: 40%;
+        /* Move to the initial position */
+    }
+}
+
+.section__container.garasidrift__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    font-size: 0.9rem;
+    color: var(--bg-color);
+    margin-bottom: 5rem;
+    background-color: black;
+}
+
+.section__container .garasidrift__container-text {
+    order: 2;
+    /* Move the text to the right by changing the order */
+    width: 50%;
+}
+
+.section__container .mobil1 {
+    order: 1;
+    /* Move the image to the left by changing the order */
+    flex: 0 0 auto;
+    max-width: 50%;
+    text-align: right;
+    /* Align the image to the right */
+}
+
+.section__container .mobil1 img {
+    width: 100%;
+    height: auto;
+}
+
+.section__container .garasidrift__container-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    /* Change the font to Montserrat */
+    font-weight: normal;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 15px;
+    /* Add margin between h3 and h4 */
+    line-height: 1.5;
+    /* Adjust line-height as needed */
+}
+
+.section__container .garasidrift__container-text h4,
+.section__container .garasidrift__container-text h5 {
+    font-family: 'Montserrat', sans-serif;
+    /* Change the font to Montserrat */
+    font-style: normal;
+    /* Use 'normal', 'italic', or 'oblique' for font-style */
+    color: white;
+    font-size: 15px;
+}
+
+.section__container .garasidrift__container-text .btn {
+    border: 1px solid var(--bg-color);
+    color: white;
+    /* Change text color to contrast with the red background */
+    background-color: red;
+    /* Change background color to red */
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    /* Adjust the border-radius value as needed for a subtle curve */
+    margin-top: 25px;
+    /* Add margin to the top of the button */
+    font-weight: bold;
+    /* Make the font bold */
+}
+
+.section__container .garasidrift__container-text .btn:hover {
+    background-color: rgba(255, 0, 0, 0.5);
+    /* Red with 50% transparency */
+    color: var(--bg-color);
+}
+
+header.sticky {
+    background: var(--bg-color);
+    padding: 14px 14%;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+}
+
+.product-contect {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.3rem;
+    align-items: start;
+    /* Align the grid items to the start of the container */
+    margin-top: 7rem;
+}
+
+.product-contect img {
+    align-self: flex-start;
+    /* Align the image to the start (top) of its grid item */
+}
+
+.row {
+    position: relative;
+    transition: all 0.35s ease;
+}
+
+.row img {
+    width: 100%;
+    height: auto;
+}
+
+.row:hover {
+    transform: scale(0.9) translate(-5px);
+    cursor: pointer;
+}
+
+.product-contect div {
+    text-align: center;
+    /* Center the text horizontally */
+    display: flex;
+    justify-content: center;
+    /* Center the text vertically */
+    align-items: center;
+    /* Center the text vertically */
+    height: 100%;
+    /* Ensure the container takes up the full height of the grid item */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    /* Tambahkan spasi setelah URL */
+    background-position: center;
+    background-size: cover;
+}
+
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    /* Ditambahkan untuk membuat label dan input tampil satu di atas yang lain */
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #ffffff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input:focus~label,
+.input:valid~label {
+    top: -15px;
+    /* Ubah nilai agar label terlihat lebih baik saat input diisi atau difokuskan */
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 15px 0 5px;
+    /* Ubah nilai padding agar input terlihat lebih baik */
+    color: #fff;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    top: 20px;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    /* Menambahkan efek transisi pada perubahan warna latar belakang */
+}
+
+button:active {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Menambahkan warna latar belakang saat tombol aktif */
+}
+
+
+/* PRODUCT */
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* Untuk memastikan agar produk yang lebih banyak bisa turun ke baris baru */
+    justify-content: space-between;
+    /* Mengatur jarak antar produk agar rata di dalam container */
+    list-style: none;
+    /* Menghilangkan default list style */
+    padding: 0;
+    /* Menghapus padding agar lebih rapi */
+}
+
+.product-item {
+    width: calc(33.33% - 10px);
+    /* Atur lebar setiap item produk (gunakan nilai yang sesuai) */
+    margin-bottom: 20px;
+    /* Spasi antara item produk ke bawah */
+    /* Selain width dan margin, Anda dapat menyesuaikan gaya lainnya sesuai kebutuhan Anda */
+}
+
+.product-card:is(:hover, :focus) .image-contain {
+    transform: scale(1.1);
+}
+
+.product-card:is(:hover, :focus) .card-action-list {
+    right: 20px;
+    opacity: 1;
+}
+
+.product-card .card-title {
+    margin-bottom: 12px;
+}
+
+.product-card .card-title>a {
+    color: inherit;
+    transition: var(--transition-1);
+}
+
+.product-card .card-title>a:is(:hover, :focus) {
+    color: var(--bittersweet);
+}
+
+.card-banner {
+    background: var(--cultured);
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.card-content {
+    padding: 24px 15px 0;
+    text-align: center;
+}
+
+.card-price {
+    color: var(--bittersweet);
+    font-family: var(--ff-roboto);
+    font-weight: var(--fw-600);
+}
+
+.card-price del {
+    color: var(--gray-x-11-gray);
+    margin-left: 8px;
+}
+
+.product-card .card-title {
+    margin-bottom: 12px;
+}
+
+.product-card .card-title>a {
+    color: inherit;
+    transition: var(--transition-1);
+}
+
+.product-card .card-title>a:is(:hover, :focus) {
+    color: var(--main-color);
+}
+
+.product-card:is(:hover, :focus) .card-action-list {
+    right: 20px;
+    opacity: 1;
+}
+
+.card-action-tooltip {
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 5px);
+    transform: translateY(-50%);
+    width: max-content;
+    background: var(--black_90);
+    color: var(--white);
+    font-family: var(--ff-roboto);
+    font-size: var(--fs-7);
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-1);
+}
+
+.card-action-btn:is(:hover, :focus)+.card-action-tooltip {
+    opacity: 1;
+}
